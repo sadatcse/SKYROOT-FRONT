@@ -1,0 +1,7 @@
+{
+  "name": "Skyroot Real Estate",
+  "description": "Premium real estate developments redefining urban living with architectural excellence and sustainable growth.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
