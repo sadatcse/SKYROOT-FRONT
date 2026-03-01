@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "quote": "A space where culture thrives.",
+    "text": "Skyroot didn't just build us an office; they built a space where our company culture could thrive.",
+    "author": "Rahim Ahmed",
+    "role": "Skyroot Azure Heights",
+    "location": "Gulshan, Dhaka",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "quote": "Truly rising to the sky!",
+    "text": "Outstanding architectural vision and natural lighting.",
+    "author": "Tanvir Hossain",
+    "role": "Skyroot Metropolis",
+    "location": "Mirpur DOHS, Dhaka",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "quote": "Safe, secure, and beautiful.",
+    "text": "Best investment we've made for our family.",
+    "author": "Mrs. Farhana Islam",
+    "role": "Skyroot Haven",
+    "location": "Bashundhara R/A, Dhaka",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+    "rating": 5
+  }
+]

@@ -3,50 +3,9 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Building2, Users, BadgeCheck, Star, ChevronDown } from 'lucide-react';
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Rahim Ahmed",
-    role: "Skyroot Azure Heights",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
-    quote: "Skyroot didn't just build us an office; they built a space where our company culture could thrive. The attention to structural detail is evident in every corner."
-  },
-  {
-    id: 2,
-    name: "Sarah Newman",
-    role: "Skyroot Green Valley",
-    initials: "SN",
-    quote: "The process was transparent from day one. I was nervous about investing in pre-construction, but their regular updates and adherence to timelines built my trust."
-  },
-  {
-    id: 3,
-    name: "Tanvir Hossain",
-    role: "Skyroot Metropolis",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
-    quote: "Outstanding architectural vision. The way they utilized natural light in our apartment complex is simply brilliant. Truly rising to the sky!"
-  },
-  {
-    id: 4,
-    name: "Anisul Karim",
-    role: "Commercial Partner",
-    initials: "AK",
-    quote: "We have worked with several developers in the past, but Skyroot's professionalism is unmatched. Their legal documentation is spotless."
-  },
-  {
-    id: 5,
-    name: "Mrs. Farhana Islam",
-    role: "Skyroot Haven",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
-    quote: "My family loves the community vibe at Skyroot Haven. Safe, secure, and beautifully maintained. It's the best investment we've made."
-  },
-  {
-    id: 6,
-    name: "Mahmudur Rahman",
-    role: "Skyroot Pinnacle",
-    initials: "MR",
-    quote: "From the initial booking to the handover of the keys, the journey was seamless. The post-handover support team is also very responsive."
-  }
-];
+import testimonialsData from '../../testimonials.json';
+
+const testimonials = testimonialsData;
 
 export const ClientTestimonials = () => {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -137,23 +96,23 @@ export const ClientTestimonials = () => {
                 </div>
                 
                 <blockquote className="text-gray-600 italic mb-8 flex-grow leading-relaxed">
-                  "{testimonial.quote}"
+                  "{testimonial.text}"
                 </blockquote>
                 
                 <div className="flex items-center gap-4 mt-auto">
                   {testimonial.image ? (
                     <img 
                       src={testimonial.image} 
-                      alt={testimonial.name} 
+                      alt={testimonial.author} 
                       className="w-12 h-12 rounded-full object-cover"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-sm">
-                      {testimonial.initials}
+                      {testimonial.author.split(' ').map(n => n[0]).join('')}
                     </div>
                   )}
                   <div>
-                    <h4 className="font-bold text-neutral text-sm">{testimonial.name}</h4>
+                    <h4 className="font-bold text-neutral text-sm">{testimonial.author}</h4>
                     <p className="text-xs text-gray-500">{testimonial.role}</p>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { projects } from '../constants';
+import { projects, featuredProjects } from '../constants';
 import { Link } from 'react-router-dom';
 
 export const FeaturedProjects = () => {
@@ -55,7 +55,7 @@ export const FeaturedProjects = () => {
           className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide px-6 lg:px-10"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <motion.div 
               key={project.id}
               initial={{ opacity: 0, y: 20 }}

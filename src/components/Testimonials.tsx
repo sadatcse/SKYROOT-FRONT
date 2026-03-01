@@ -2,38 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight, Quote, Star } from 'lucide-react';
 
-const testimonials = [
-  {
-    id: 1,
-    quote: "A space where culture thrives.",
-    text: "Skyroot didn't just build us an office; they built a space where our company culture could thrive. The attention to structural detail is evident in every corner.",
-    author: "Rahim Ahmed",
-    role: "Skyroot Azure Heights",
-    location: "Gulshan, Dhaka",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    rating: 5
-  },
-  {
-    id: 2,
-    quote: "Truly rising to the sky!",
-    text: "Outstanding architectural vision. The way they utilized natural light in our apartment complex is simply brilliant. Truly rising to the sky!",
-    author: "Tanvir Hossain",
-    role: "Skyroot Metropolis",
-    location: "Mirpur DOHS, Dhaka",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    rating: 5
-  },
-  {
-    id: 3,
-    quote: "Safe, secure, and beautiful.",
-    text: "My family loves the community vibe at Skyroot Haven. Safe, secure, and beautifully maintained. It's the best investment we've made.",
-    author: "Mrs. Farhana Islam",
-    role: "Skyroot Haven",
-    location: "Bashundhara R/A, Dhaka",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    rating: 5
-  }
-];
+import testimonialsData from '../../testimonials.json';
+
+const testimonials = testimonialsData;
 
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
